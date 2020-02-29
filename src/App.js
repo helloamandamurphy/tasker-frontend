@@ -1,6 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchUsers } from './actions/fetchUsers'
 
 class App extends React.Component {
+  componentDidMount() {
+  
+  }
   render() {
     return (
       <div className="App">
@@ -10,4 +15,11 @@ class App extends React.Component {
   }
 }
 
-export default App;
+// Access values in store as props
+// const mapStateToProps = (state) => {
+//   return {
+//     users: state.users
+//   }
+// }
+
+export default connect(null, {fetchUsers})(App);
