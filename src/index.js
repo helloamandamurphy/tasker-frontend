@@ -1,12 +1,13 @@
+// React + Dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 
-import listReducer from './reducers/listReducer';
-
+// Import from Files
 import App from './App';
+import listReducer from './reducers/listReducer';
 
 // Review compose/Redux
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

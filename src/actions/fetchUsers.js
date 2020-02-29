@@ -1,5 +1,4 @@
 export function fetchUsers() {
-  fetch('http://localhost:3000/api/v1/users')
-  .then(resp => resp.json())
-  .then(data => console.log(data))
+  // Have to check a different video to figure out how to handle Users
+  // And how to only view lists that belong to users.
 }
