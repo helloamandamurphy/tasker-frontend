@@ -23,6 +23,7 @@ class ListsContainer extends React.Component {
   }
 }
 
+//Access what exists in the Redux Store
 const mapStateToProps = state => {
   return {
     lists: state.lists
