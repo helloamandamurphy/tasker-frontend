@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 // import ListsContainer from './containers/ListsContainer' (not currently using)
 import { getCurrentUser } from "./actions/currentUser.js"
 import NavBar from "./components/NavBar.js"
+import MainContainer from "./containers/MainContainer.js"
 
 class App extends React.Component {
   componentDidMount() {
@@ -14,7 +15,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <NavBar/>
+      <div className="App">
+        <NavBar/>
+        <MainContainer/>
+      </div>
     );
   }
 }
