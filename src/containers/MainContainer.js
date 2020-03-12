@@ -1,9 +1,13 @@
+// React + Dependencies
 import React from 'react'
+
+// Import from Files
+import MyLists from '../components/MyLists.js'
 
 const MainContainer = () => {
   return (
     <div className="MainContainer">
-      I am the main container.
+      <MyLists/>
     </div>
   )
 }
