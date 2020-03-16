@@ -1,12 +1,16 @@
 //React + Dependencies
 import React from 'react';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom'
 
 //Import from Files
 // import ListsContainer from './containers/ListsContainer' (not currently using)
 import { getCurrentUser } from "./actions/currentUser.js"
 import NavBar from "./components/NavBar.js"
 import MainContainer from "./containers/MainContainer.js"
+import Login from './components/Login.js'
+import Logout from './components/Logout.js'
+import MyLists from './components/MyLists.js'
 
 class App extends React.Component {
   componentDidMount() {
@@ -17,7 +21,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar/>
-        <MainContainer/>
+        <Route exact path='/login' component={Login}/>
+        <Route exact path='/my-lists' component={MyLists}/>
       </div>
     );
   }
