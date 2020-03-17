@@ -7,12 +7,14 @@ import usersReducer from './reducers/users.js'
 import currentUser from './reducers/currentUser';
 import loginForm from './reducers/loginForm';
 import myLists from './reducers/myLists';
+import signupForm from './reducers/signupForm';
 
 // Combining Reducers
 const reducer = combineReducers({
   users: usersReducer,
   currentUser,
   loginForm,
+  signupForm,
   myLists
 })
 
