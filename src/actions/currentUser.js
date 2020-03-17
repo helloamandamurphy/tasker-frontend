@@ -1,4 +1,5 @@
 // Import from Files
+import { resetSignupForm } from "./signupForm.js"
 import { resetLoginForm } from "./loginForm.js"
 import { getMyLists } from "./myLists.js"
 
@@ -19,6 +20,33 @@ export const clearCurrentUser = () => {
 // REVIEW: async vs. sync and then also dispatch.
 
 // asychronous action creators (requests from backend)
+export const signup = credentials => {
+  return dispatch => {
+    const userInfo = {
+      user: credentials
+    }
+    return fetch("http://localhost:3000/api/v1/signup", {
+      credentials: "include",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userInfo)
+    })
+    .then(resp => resp.json())
+    .then(response => {
+      if(response.error) {
+        alert(response.error)
+      } else {
+        dispatch(setCurrentUser(response))
+        dispatch(getMyLists())
+        dispatch(resetSignupForm())
+      }
+    })
+    .catch(console.log)
+  }
+}
+
 export const login = credentials => {
   return dispatch => {
     return fetch("http://localhost:3000/api/v1/login", {
