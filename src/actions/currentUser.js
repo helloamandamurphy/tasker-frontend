@@ -20,7 +20,7 @@ export const clearCurrentUser = () => {
 // REVIEW: async vs. sync and then also dispatch.
 
 // asychronous action creators (requests from backend)
-export const signup = credentials => {
+export const signup = (credentials, history) => {
   return dispatch => {
     const userInfo = {
       user: credentials
@@ -41,13 +41,14 @@ export const signup = credentials => {
         dispatch(setCurrentUser(response))
         dispatch(getMyLists())
         dispatch(resetSignupForm())
+        history.push('/')
       }
     })
     .catch(console.log)
   }
 }
 
-export const login = credentials => {
+export const login = (credentials, history) => {
   return dispatch => {
     return fetch("http://localhost:3000/api/v1/login", {
       credentials: "include",
@@ -65,6 +66,7 @@ export const login = credentials => {
         dispatch(setCurrentUser(response))
         dispatch(getMyLists())
         dispatch(resetLoginForm())
+        history.push('/')
       }
     })
     .catch(console.log)
