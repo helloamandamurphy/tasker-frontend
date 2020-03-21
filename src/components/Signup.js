@@ -3,8 +3,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Import from Files
-import { updateSignupForm } from '../actions/signupForm.js';
-import { signup } from '../actions/currentUser.js'
+import { updateSignupForm } from '../actions/signupForm';
+import { signup } from '../actions/currentUser'
 
 const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
 

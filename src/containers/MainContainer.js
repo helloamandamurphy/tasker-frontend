@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Import from Files
-import MyLists from '../components/MyLists.js'
+import MyLists from '../components/MyLists'
 
 const MainContainer = () => {
   return (

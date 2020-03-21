@@ -3,7 +3,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk'
 
 // Import from Files
-import usersReducer from './reducers/users.js'
+import usersReducer from './reducers/users';
 import currentUser from './reducers/currentUser';
 import loginForm from './reducers/loginForm';
 import myLists from './reducers/myLists';

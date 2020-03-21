@@ -5,14 +5,14 @@ import { Route, withRouter } from 'react-router-dom'
 
 //Import from Files
 // import ListsContainer from './containers/ListsContainer' (not currently using)
-import { getCurrentUser } from "./actions/currentUser.js"
-import NavBar from "./components/NavBar.js"
-import MainContainer from "./containers/MainContainer.js"
-import Home from './components/Home.js'
-import Signup from './components/Signup.js'
-import Login from './components/Login.js'
-import Logout from './components/Logout.js'
-import MyLists from './components/MyLists.js'
+import { getCurrentUser } from "./actions/currentUser"
+import NavBar from "./components/NavBar"
+import MainContainer from "./containers/MainContainer"
+import Home from './components/Home'
+import Signup from './components/Signup'
+import Login from './components/Login'
+import Logout from './components/Logout'
+import MyLists from './components/MyLists'
 
 class App extends React.Component {
   componentDidMount() {

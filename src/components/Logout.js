@@ -3,7 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 // Import from Files
-import { logout } from "../actions/currentUser.js"
+import { logout } from "../actions/currentUser"
 
 const Logout = ({ logout }) => {
   return (

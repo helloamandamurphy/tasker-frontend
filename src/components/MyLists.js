@@ -3,7 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 //Import from Files
-import ListCard from './ListCard.js'
+import ListCard from './ListCard'
 
 const MyLists = props => {
   const listCards = props.lists.length > 0 ?

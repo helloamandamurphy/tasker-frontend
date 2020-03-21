@@ -3,8 +3,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 // Import from Files
-import Login from './Login.js'
-import Logout from './Logout.js'
+import Login from './Login'
+import Logout from './Logout'
 
 const NavBar = ({ currentUser, loggedIn }) => {
   return (
