@@ -10,7 +10,7 @@ const NavBar = ({ currentUser, loggedIn }) => {
   return (
     <div className="nav">
       { currentUser ? <strong>Welcome, {currentUser.name}!</strong> : "" }
-      { currentUser ? <Logout/> : <Login/> }
+      { currentUser ? <Logout/> : null }
     </div>
   )
 }
