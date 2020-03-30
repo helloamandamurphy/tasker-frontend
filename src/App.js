@@ -12,6 +12,7 @@ import Home from './components/Home'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import Logout from './components/Logout'
+import NewListForm from './components/NewListForm'
 import MyLists from './components/MyLists'
 
 class App extends React.Component {
@@ -27,7 +28,8 @@ class App extends React.Component {
         <Route exact path='/' render={()=> loggedIn ? <MyLists/> : <Home/> }/>
         <Route exact path='/signup' component={Signup}/>
         <Route exact path='/login' component={Login}/>
-        <Route exact path='/my-lists' component={MyLists}/>
+        <Route exact path='/lists' component={MyLists}/>
+        <Route exact path='/lists/new' component={NewListForm}/>
       </div>
     );
   }
