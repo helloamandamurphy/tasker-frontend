@@ -17,8 +17,6 @@ export const clearCurrentUser = () => {
   }
 }
 
-// REVIEW: async vs. sync and then also dispatch.
-
 // asychronous action creators (requests from backend)
 export const signup = (credentials, history) => {
   return dispatch => {
