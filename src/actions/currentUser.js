@@ -1,7 +1,7 @@
 // Import from Files
 import { resetSignupForm } from "./signupForm.js"
 import { resetLoginForm } from "./loginForm.js"
-import { getMyLists } from "./myLists.js"
+import { getMyLists, clearLists } from "./myLists.js"
 
 // synchronous action creators
 export const setCurrentUser = user => {
@@ -74,6 +74,7 @@ export const login = (credentials, history) => {
 export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
+    dispatch(clearLists())
     return fetch('http://localhost:3000/api/v1/logout',{
       credentials: "include",
       method: "DELETE"
