@@ -34,3 +34,7 @@
 ## Progress
 
 ### 2 April
+-Made progress on Video 8
+
+### 3 April
+-Completed Video 8; Added to NavBar; cleared up issue with Logout not clearing the lists in the Redux store
