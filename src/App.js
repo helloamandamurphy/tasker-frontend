@@ -1,7 +1,7 @@
 //React + Dependencies
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, withRouter } from 'react-router-dom'
+import { Route, Switch, withRouter, Link } from 'react-router-dom'
 
 //Import from Files
 // import ListsContainer from './containers/ListsContainer' (not currently using)
@@ -24,12 +24,13 @@ class App extends React.Component {
     const { loggedIn } = this.props;
     return (
       <div className="App">
-        <NavBar/>
-        <Route exact path='/' render={()=> loggedIn ? <MyLists/> : <Home/> }/>
-        <Route exact path='/signup' component={Signup}/>
-        <Route exact path='/login' component={Login}/>
-        <Route exact path='/lists' component={MyLists}/>
-        <Route exact path='/lists/new' component={NewListForm}/>
+        { loggedIn ? <NavBar/> : <Home/> }
+        <Switch>
+          <Route exact path='/signup' component={Signup}/>
+          <Route exact path='/login' component={Login}/>
+          <Route exact path='/lists' component={MyLists}/>
+          <Route exact path='/lists/new' component={NewListForm}/>
+        </Switch>
       </div>
     );
   }
