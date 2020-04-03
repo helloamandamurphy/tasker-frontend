@@ -1,6 +1,7 @@
 // React + Dependencies
 import React from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 
 // Import from Files
 import Login from './Login'
@@ -8,8 +9,9 @@ import Logout from './Logout'
 
 const NavBar = ({ currentUser, loggedIn }) => {
   return (
-    <div className="nav">
-      { currentUser ? <strong>Welcome, {currentUser.name}!</strong> : "" }
+    <div className="NavBar">
+      <NavLink to="/lists">My Lists  |  </NavLink>
+      <NavLink to="/lists/new">Create a New List  |  </NavLink>
       { currentUser ? <Logout/> : null }
     </div>
   )
