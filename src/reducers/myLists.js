@@ -3,9 +3,9 @@ const initialState = []
 export default (state = [], action) => {
   switch (action.type) {
     case "SET_MY_LISTS":
-      return action.lists
+      return action.list
     case "ADD_LIST":
-      return state.trips.concat(action.trip)
+      return state.concat(action.list)
     case "CLEAR_LISTS":
       return initialState
     default:
