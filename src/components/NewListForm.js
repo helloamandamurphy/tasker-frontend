@@ -18,7 +18,8 @@ const NewListForm = ({ formData, history, updateNewListForm, createList, userId}
     event.preventDefault()
     createList({
       ...formData,
-    userId})
+    userId
+  }, history)
   }
 
   return (
