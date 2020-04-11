@@ -1,3 +1,6 @@
+// Import from Files
+import { resetNewListForm } from './newListForm'
+
 //synchronous actions
 export const setMyLists = lists => {
   return {
@@ -42,7 +45,7 @@ export const getMyLists = () => {
   }
 }
 
-export const createList = listData => {
+export const createList = (listData, history) => {
   return dispatch => {
     const sendableListData = {
       name: listData.name,
@@ -58,7 +61,15 @@ export const createList = listData => {
       body: JSON.stringify(sendableListData)
     })
     .then(r => r.json())
-    .then(console.log)
+    .then(resp => {
+      if (resp.error) {
+        alert(resp.error)
+      } else {
+        dispatch(addList(resp))
+        dispatch(resetNewListForm())
+        history.push(`/lists/${resp.id}`)
+      }
+    })
     .catch(console.log)
   }
 }
