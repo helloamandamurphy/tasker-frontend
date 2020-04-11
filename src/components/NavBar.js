@@ -12,7 +12,7 @@ const NavBar = ({ currentUser, loggedIn }) => {
     <div className="NavBar">
       <NavLink to="/lists">My Lists  |  </NavLink>
       <NavLink to="/lists/new">Create a New List  |  </NavLink>
-      { currentUser ? <Logout/> : null }
+      { loggedIn ? <><p id="loggedin">Logged in as {currentUser.name}</p><Logout/></> : null}
     </div>
   )
 }
