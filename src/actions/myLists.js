@@ -37,7 +37,6 @@ export const getMyLists = () => {
       if (response.error) {
         alert(response.error)
       } else {
-        console.log(response)
         dispatch(setMyLists(response))
       }
     })
