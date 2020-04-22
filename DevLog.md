@@ -6,12 +6,12 @@
 * User can view and create new lists
 * Videos 1-9
 * Need to update NavBar to show different options when the user is logged in or not logged in.
+* When I sign in, the sign in form is still rendering.
 
 ## What's Left To Do
 * Video 10
 * Video 11
 * Video 12
-* When I sign in, the sign in form is still rendering.
 * Change Signup/Login password input type to password vs. text
 * Add/view tasks
 * Add basic navigation via NavBar
