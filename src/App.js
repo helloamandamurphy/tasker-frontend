@@ -14,6 +14,7 @@ import Login from './components/Login'
 import Logout from './components/Logout'
 import NewListForm from './components/NewListForm'
 import MyLists from './components/MyLists'
+import ListCard from './components/ListCard'
 
 class App extends React.Component {
   componentDidMount() {
@@ -21,7 +22,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { loggedIn } = this.props;
+    const { loggedIn, lists } = this.props
+
     return (
       <div className="App">
         { loggedIn ? <NavBar/> : <Home/> }
@@ -30,6 +32,10 @@ class App extends React.Component {
           <Route exact path='/login' component={Login}/>
           <Route exact path='/lists' component={MyLists}/>
           <Route exact path='/lists/new' component={NewListForm}/>
+          <Route exact path='/lists/:id' render={props => {
+            const list = lists.find(list => list.id === parseInt(props.match.params.id))
+            return <ListCard list={list} {...props}/>
+          }}/>
         </Switch>
       </div>
     );
@@ -39,7 +45,8 @@ class App extends React.Component {
 //Only returns whether or not our user is logged in
 const mapStateToProps = state => {
   return ({
-    loggedIn: !!state.currentUser
+    loggedIn: !!state.currentUser,
+    lists: state.myLists
   })
 }
 
