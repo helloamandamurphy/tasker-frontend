@@ -1,5 +1,6 @@
 // React + Dependencies
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ListCard = ({ list }) => {
   return (
@@ -7,6 +8,7 @@ const ListCard = ({ list }) => {
       <div>
         <h3>{list.name}</h3>
         <p>{list.end_time}</p>
+        <Link to={`/lists/${list.id}/edit`}>Edit this List</Link>
       </div> :
     <p>Sorry! We couldn't find your list.</p>
   )
