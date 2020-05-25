@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // Import from Files
-import { updateList } from '../actions/myLists'
+import { updateList, deleteList } from '../actions/myLists'
 import { setFormDataForEdit, resetListForm } from '../actions/listForm'
 import ListForm from '../components/ListForm'
 
@@ -24,20 +24,24 @@ class EditListFormWrapper extends React.Component {
     this.props.resetListForm()
   }
 
-  handleSubmit = (formData, userId) => {
+  handleSubmit = (formData) => {
     const { updateList, list, history } = this.props;
 
     updateList({
       ...formData,
       listId: list.id,
-      userId
     }, history)
   }
 
   render() {
-    const { history, handleSubmit } = this.props
-    return <ListForm editMode handleSubmit={this.handleSubmit} />
+    const { history, deleteList, list } = this.props
+    const listId = list ? list.id : null
+    return <>
+        <ListForm editMode handleSubmit={this.handleSubmit} />
+        <br/>
+        <button onClick={()=>deleteList(listId, history)}>Delete List</button>
+      </>
   }
 };
 
-export default connect(null, { updateList, setFormDataForEdit, resetListForm })(EditListFormWrapper);
+export default connect(null, { updateList, setFormDataForEdit, resetListForm, deleteList })(EditListFormWrapper);
