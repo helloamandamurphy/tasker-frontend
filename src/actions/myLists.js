@@ -1,5 +1,5 @@
 // Import from Files
-import { resetNewListForm } from './newListForm'
+import { resetListForm } from './listForm'
 
 //synchronous actions
 export const setMyLists = lists => {
@@ -18,6 +18,13 @@ export const clearLists = () => {
 export const addList = list => {
   return {
     type: "ADD_LIST",
+    list
+  }
+}
+
+export const updateListSuccess = list => {
+  return {
+    type: "UPDATE_LIST",
     list
   }
 }
@@ -65,7 +72,34 @@ export const createList = (listData, history) => {
         alert(resp.error)
       } else {
         dispatch(addList(resp))
-        dispatch(resetNewListForm())
+        dispatch(resetListForm())
+        history.push(`/lists/${resp.id}`)
+      }
+    })
+    .catch(console.log)
+  }
+}
+
+export const updateList = (listData, history) => {
+  return dispatch => {
+    const sendableListData = {
+      name: listData.name,
+      end_time: listData.endTime
+    }
+    return fetch(`http://localhost:3000/api/v1/lists/${listData.listId}`, {
+      credentials: "include",
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(sendableListData)
+    })
+    .then(r => r.json())
+    .then(resp => {
+      if (resp.error) {
+        alert(resp.error)
+      } else {
+        dispatch(updateListSuccess(resp))
         history.push(`/lists/${resp.id}`)
       }
     })
