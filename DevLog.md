@@ -4,18 +4,19 @@
 ## What's Working / Done
 * User Signup, Login, Logout
 * User can view and create new lists
-* Videos 1-9
+* Videos 1-11
 * Need to update NavBar to show different options when the user is logged in or not logged in.
 * When I sign in, the sign in form is still rendering.
+* Add basic navigation via NavBar
 
 ## What's Left To Do
-* Video 10
-* Video 11
 * Video 12
 * Change Signup/Login password input type to password vs. text
 * Add/view tasks
-* Add basic navigation via NavBar
 * Add CSS
+* Address unnecessary imported Files
+* Address time conformity issue (see screenshot for error)
+* In Redux store, Lists: and MyLists look identical. Both aren't necessary.
 
 ### For Project Completion
 * Write Blog Post
@@ -42,3 +43,11 @@
 
 ### 3 April
 -Completed Video 8; Added to NavBar; cleared up issue with Logout not clearing the lists in the Redux store
+
+### 23 April
+-Finally completed Video 10; Added a show page for the individual lists; started working on the edit functionality for a List.
+-Completed Video 11; Have issues to resolve with Edit List feature that will be resolved with video 12, and then it will be time to assess what's left to do.
+
+### 24 May (Woof, that was a long break)
+-Finally resolved Edit Form issues
+-Updated dependencies due to security issues
