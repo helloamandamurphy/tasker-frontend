@@ -22,9 +22,16 @@ export const addList = list => {
   }
 }
 
+export const deleteListSuccess = listId => {
+  return {
+    type: "DELETE_LIST_SUCCESS",
+    listId
+  }
+}
+
 export const updateListSuccess = list => {
   return {
-    type: "UPDATE_LIST",
+    type: "UPDATE_LIST_SUCCESS",
     list
   }
 }
@@ -101,6 +108,28 @@ export const updateList = (listData, history) => {
       } else {
         dispatch(updateListSuccess(resp))
         history.push(`/lists/${resp.id}`)
+      }
+    })
+    .catch(console.log)
+  }
+}
+
+export const deleteList = (listId, history) => {
+  return dispatch => {
+    return fetch(`http://localhost:3000/api/v1/lists/${listId}`, {
+      credentials: "include",
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(r => r.json())
+    .then(resp => {
+      if (resp.error) {
+        alert(resp.error)
+      } else {
+        dispatch(deleteListSuccess(listId))
+        history.push(`/lists`)
       }
     })
     .catch(console.log)
