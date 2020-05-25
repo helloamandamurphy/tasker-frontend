@@ -2,10 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Import from Files
-import Signup from './Signup'
-import Login from './Login'
-
 //stateless component
 const Home = () => (
   <div>

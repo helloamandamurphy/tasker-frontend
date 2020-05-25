@@ -8,12 +8,12 @@
 * Need to update NavBar to show different options when the user is logged in or not logged in.
 * When I sign in, the sign in form is still rendering.
 * Add basic navigation via NavBar
+* Address unncessary imported Files
 
 ## What's Left To Do
 * Change Signup/Login password input type to password vs. text
 * Add/view tasks
 * Add CSS
-* Address unnecessary imported Files
 * Address time conformity issue (see screenshot for error)
 * In Redux store, Lists: and MyLists look identical. Both aren't necessary.
 * EditListFormWrapper and NewListFormWrapper probably should not be in the containers folder.
@@ -58,7 +58,6 @@
 -Left to do:
 * Evaluate what needs to happen to make the app look the right way on the front end
 * Add changes to front-end / back-end
-* Cut excess
 * Add notes re: what everything does
 * Add ability to add tasks in list creation / edit screens
 * Review project requirements

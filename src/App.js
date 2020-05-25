@@ -1,17 +1,14 @@
 //React + Dependencies
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch, withRouter, Link } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 
 //Import from Files
 import { getCurrentUser } from "./actions/currentUser"
 import NavBar from "./components/NavBar"
-import MainContainer from "./containers/MainContainer"
 import Home from './components/Home'
 import Signup from './components/Signup'
 import Login from './components/Login'
-import Logout from './components/Logout'
-import ListForm from './components/ListForm'
 import MyLists from './components/MyLists'
 import ListCard from './components/ListCard'
 import NewListFormWrapper from './containers/NewListFormWrapper'
