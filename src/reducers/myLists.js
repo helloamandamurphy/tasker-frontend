@@ -8,8 +8,10 @@ export default (state = [], action) => {
       return state.concat(action.list)
     case "CLEAR_LISTS":
       return initialState
-    case "UPDATE_LIST":
+    case "UPDATE_LIST_SUCCESS":
       return state.map(list => list.id === action.list.id ? action.list : list)
+    case "DELETE_LIST_SUCCESS":
+      return state.filter(list => list.id === action.listId ? false : true)
     default:
       return state
   }
