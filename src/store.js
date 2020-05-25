@@ -6,7 +6,7 @@ import thunk from 'redux-thunk'
 import signupForm from './reducers/signupForm';
 import loginForm from './reducers/loginForm';
 import currentUser from './reducers/currentUser';
-import newListForm from './reducers/newListForm';
+import listForm from './reducers/listForm';
 import myLists from './reducers/myLists';
 
 
@@ -15,7 +15,7 @@ const reducer = combineReducers({
   signupForm,
   loginForm,
   currentUser,
-  newListForm,
+  listForm,
   myLists
 })
 
