@@ -9,8 +9,8 @@ import Logout from './Logout'
 const NavBar = ({ currentUser, loggedIn }) => {
   return (
     <div className="NavBar">
-      <NavLink to="/lists">My Lists  |  </NavLink>
-      <NavLink to="/lists/new">Create a New List  |  </NavLink>
+      <NavLink to="/lists">My Lists </NavLink>
+      <NavLink to="/lists/new">Create a New List</NavLink>
       { loggedIn ? <><p id="loggedin">Logged in as {currentUser.name}</p><Logout/></> : null}
     </div>
   )
