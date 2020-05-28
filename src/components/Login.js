@@ -25,9 +25,16 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
 // Login Form
   return (
     <form onSubmit={ handleSubmit }>
+      <h3>Log In</h3>
       <input placeholder="email" value={loginFormData.email} type="text" name="email" onChange={handleInputChange} />
-      <input placeholder= "password" value={loginFormData.password} type="text" name="password" onChange={handleInputChange} />
+      <input placeholder= "password" value={loginFormData.password} type="password" name="password" onChange={handleInputChange} />
       <input value="Log In" type="submit"/>
+
+      <div>
+        <h4>Sample Login Information</h4>
+        <p>Email: thor@asgard.net</p>
+        <p>Password: 1234</p>
+      </div>
     </form>
   )
 }
