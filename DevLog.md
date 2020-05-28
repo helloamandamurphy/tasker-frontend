@@ -61,3 +61,51 @@
 * Add notes re: what everything does
 * Add ability to add tasks in list creation / edit screens
 * Review project requirements
+
+### 26 May
+#### Home Page (Logged out)
+* Description of the application
+
+#### Signup / Login Forms
+* Add text and an image to differentiate each page
+* Change field to password instead of text
+* Add sample email and password for guests
+
+#### Home Page (Logged in)
+* Add Clock as a secondary NavBar?
+* Change Home Page to boards of existing lists. (My Lists)
+* First board should include a link to Create a New List
+* Revise NavBar to include: Home icon, Logo, and Logged in as.., Logout Button
+
+#### List Create Page
+* Rework Form
+* Add approximate start time field
+* When you add the End Time, there should be a message that says how much time you have to work based on start/end times.
+* There should also be an error message if the end time is before the start time.
+* Is the time format correct on the front and back ends?
+* Add the ability to add tasks to the creation page (front-end/back-end)
+* Subtract time from total work time
+
+#### List Edit Page
+* Add the ability to edit tasks to the edit page (front-end/back-end)
+* Add the ability to delete tasks to the edit page
+* Add estimated start time.
+
+#### List Show Page
+* Needs to have a list of tasks with their times
+* Needs to show total amount of time
+* Needs to show start and end times
+* Needs a start button that starts the first task and a timer
+* Needs an alert when the task timer is at zero, and maybe a completed button
+* Needs to include a list of upcoming tasks / completed tasks--probably need to add a status to the tasks on the backend, like a boolean or something that defaults to false (not complete)
+
+#### Backend Notes
+* No need for task show page/route
+* Maybe the task estimated time should be a percentage of the time to adapt to total time changes.
+
+### Notes from the Study Session on May 27
+-Look into Moment.js, especially for timer
+-Locally store timer info
+
+### May 28
+-Continued working on site review 
