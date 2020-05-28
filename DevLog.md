@@ -64,12 +64,12 @@
 
 ### 26 May
 #### Home Page (Logged out)
-* Description of the application
+~~ Description of the application ~~
 
 #### Signup / Login Forms
-* Add text and an image to differentiate each page
-* Change field to password instead of text
-* Add sample email and password for guests
+~~ Add text and an image to differentiate each page ~~
+~~ Change field to password instead of text ~~
+~~ Add sample email and password for guests ~~
 
 #### Home Page (Logged in)
 * Add Clock as a secondary NavBar?
@@ -108,4 +108,6 @@
 -Locally store timer info
 
 ### May 28
--Continued working on site review 
+-Continued working on site review
+-New issue where the login/signup forms are rendering under the Home Component. (Look at the Switch case in App.js)
+-Need to go through each component/container and identify type or move to the correct folder as necessary
