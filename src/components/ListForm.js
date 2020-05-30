@@ -15,30 +15,30 @@ const ListForm = ({ formData, updateListForm, userId, list, handleSubmit, editMo
 
   return (
     <div>
-      <form onSubmit={event => {
+      <form class="ui form" onSubmit={event => {
         event.preventDefault()
         handleSubmit(formData, userId)
       }}>
 
         <h2>{editMode ? "Edit Your List" : "Create a List"}</h2>
-        <label>List Name</label>
+        <label class="ui label">List Name</label>
         <input
           type="text"
           placeholder="List Name"
           name="name"
           value={name}
           onChange={handleChange}
-          /><br></br>
+          /><br/><br/>
 
-        <label>End Time</label>
+        <label class="ui label">End Time</label>
         <input
         type="time"
         name="endTime"
         value={endTime}
         onChange={handleChange}
-        /><br></br>
+        /><br/><br/>
 
-        <input type="submit" value={editMode ? "Edit List" : "Create List"}/>
+        <input class="ui button" type="submit" value={editMode ? "Edit List" : "Create List"}/>
       </form>
     </div>
   )

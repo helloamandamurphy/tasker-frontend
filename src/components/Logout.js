@@ -8,13 +8,13 @@ import { logout } from "../actions/currentUser"
 
 const Logout = ({ logout, history }) => {
   return (
-    <form onSubmit={(event) => {
+    <form style={{display: "inline-block"}} onSubmit={(event) => {
         event.preventDefault()
         logout()
         history.push('/')
       }
     }>
-      <input type="submit" value="Log Out"/>
+      <input class="ui mini button" type="submit" value="Log Out"/>
     </form>
   )
 }

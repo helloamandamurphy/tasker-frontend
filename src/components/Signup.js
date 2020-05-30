@@ -24,12 +24,14 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
 
 // Signup Form
   return (
-    <form onSubmit={ handleSubmit }>
-      <h3>Sign Up</h3>
-      <input placeholder="name" value={signupFormData.name} type="text" name="name" onChange={handleInputChange} />
-      <input placeholder="email" value={signupFormData.email} type="text" name="email" onChange={handleInputChange} />
-      <input placeholder= "password" value={signupFormData.password} type="password" name="password" onChange={handleInputChange} />
-      <input value="Sign Up" type="submit"/>
+    <form class="ui form" onSubmit={ handleSubmit }>
+      <h2>Sign Up</h2>
+      <div class="equal width fields">
+        <input placeholder="name" value={signupFormData.name} type="text" name="name" onChange={handleInputChange} />
+        <input placeholder="email" value={signupFormData.email} type="text" name="email" onChange={handleInputChange} />
+        <input placeholder= "password" value={signupFormData.password} type="password" name="password" onChange={handleInputChange} />
+      </div>
+      <input class="ui button" value="Sign Up" type="submit"/>
       <p>Note: If you're testing the app and don't want to create a login, use the sample email and password provided on the login page. </p>
     </form>
   )
