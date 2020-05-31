@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 // Import from Files
 import { createList } from '../actions/myLists'
-import ListForm from '../components/ListForm'
+import ListForm from './ListForm'
 
 // functional / stateless component
 const NewListFormWrapper = ({ history, createList }) => {

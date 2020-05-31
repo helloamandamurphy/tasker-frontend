@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 // Import from Files
 import { updateList, deleteList } from '../actions/myLists'
 import { setFormDataForEdit, resetListForm } from '../actions/listForm'
-import ListForm from '../components/ListForm'
+import ListForm from './ListForm'
 
 // Class Component because we need to use ComponentDidMount to populate our form input
 class EditListFormWrapper extends React.Component {

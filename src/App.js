@@ -8,9 +8,9 @@ import { getCurrentUser } from "./actions/currentUser"
 import NavBar from "./components/NavBar"
 import MyLists from './components/MyLists'
 import ListCard from './components/ListCard'
-import NewListFormWrapper from './containers/NewListFormWrapper'
-import EditListFormWrapper from './containers/EditListFormWrapper'
-import LoggedOut from './components/LoggedOut'
+import NewListFormWrapper from './components/NewListFormWrapper'
+import EditListFormWrapper from './components/EditListFormWrapper'
+import LoggedOut from './containers/LoggedOut'
 
 class App extends React.Component {
   componentDidMount() {

@@ -3,10 +3,10 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 
 // Import from Files
-import VisitorNavBar from './VisitorNavBar'
-import Home from './Home'
-import Signup from './Signup'
-import Login from './Login'
+import VisitorNavBar from '../components/VisitorNavBar'
+import Home from '../components/Home'
+import Signup from '../components/Signup'
+import Login from '../components/Login'
 
 // functional / stateless component / container
 const LoggedOut = () => (
