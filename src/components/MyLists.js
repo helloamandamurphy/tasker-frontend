@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 // functional / stateless component
 const MyLists = props => {
   const listCards = props.lists.length > 0 ?
-    props.lists.map(l => (<p key={l.id}><Link to={`/lists/${l.id}`}>{l.name}</Link></p>)) : null
+    props.lists.map(l => (<Link to={`/lists/${l.id}`} key={l.id}><button class="ui blue huge button" style={{display: "block", margin: "1em"}}>{l.name}</button></Link>)) : null
+
   return listCards
 }
 
