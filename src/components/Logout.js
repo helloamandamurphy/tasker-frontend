@@ -9,13 +9,13 @@ import { logout } from "../actions/currentUser"
 // functional / stateless component
 const Logout = ({ logout, history }) => {
   return (
-    <form style={{display: "inline-block"}} onSubmit={(event) => {
+    <form class="item" onSubmit={(event) => {
         event.preventDefault()
         logout()
         history.push('/')
       }
     }>
-      <input class="ui mini button" type="submit" value="Log Out"/>
+      <input class="ui button" type="submit" value="Log Out"/>
     </form>
   )
 }
