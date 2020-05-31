@@ -6,13 +6,11 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 //Import from Files
 import { getCurrentUser } from "./actions/currentUser"
 import NavBar from "./components/NavBar"
-import Home from './components/Home'
-import Signup from './components/Signup'
-import Login from './components/Login'
 import MyLists from './components/MyLists'
 import ListCard from './components/ListCard'
 import NewListFormWrapper from './containers/NewListFormWrapper'
 import EditListFormWrapper from './containers/EditListFormWrapper'
+import LoggedOut from './components/LoggedOut'
 
 class App extends React.Component {
   componentDidMount() {
@@ -21,13 +19,10 @@ class App extends React.Component {
 
   render() {
     const { loggedIn, lists } = this.props
-
     return (
       <div className="App">
-        { loggedIn ? <NavBar/> : <Home/> }
+        { loggedIn ? <NavBar/> : <LoggedOut/> }
         <Switch>
-          <Route exact path='/signup' component={Signup}/>
-          <Route exact path='/login' component={Login}/>
           <Route exact path='/lists' component={MyLists}/>
           <Route exact path='/lists/new' component={NewListFormWrapper}/>
           <Route exact path='/lists/:id' render={props => {
