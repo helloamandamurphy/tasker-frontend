@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { updateSignupForm } from '../actions/signupForm';
 import { signup } from '../actions/currentUser'
 
+// functional / stateless component
 const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
 
   const handleInputChange = event => {

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 // Import from Files
 import { updateListForm } from '../actions/listForm';
 
+// functional component
 const ListForm = ({ formData, updateListForm, userId, list, handleSubmit, editMode}) => {
   const { name, endTime } = formData
 

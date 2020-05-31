@@ -8,7 +8,7 @@ import Home from './Home'
 import Signup from './Signup'
 import Login from './Login'
 
-//stateless component
+// functional / stateless component / container
 const LoggedOut = () => (
   <React.Fragment>
     <VisitorNavBar/>

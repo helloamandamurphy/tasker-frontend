@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// functional / stateless component
 const ListCard = ({ list }) => {
   return (
     list ?

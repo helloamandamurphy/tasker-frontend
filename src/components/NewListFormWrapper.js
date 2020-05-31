@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { createList } from '../actions/myLists'
 import ListForm from '../components/ListForm'
 
-//Stateless Component
+// functional / stateless component
 const NewListFormWrapper = ({ history, createList }) => {
 
   const handleSubmit = (formData, userId) => {

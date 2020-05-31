@@ -1,19 +1,7 @@
 # Dev Log
-*Started a little late, on April 2. But what the heck.*
-
-## What's Working / Done
-* User Signup, Login, Logout
-* User can view and create new lists
-* Videos 1-12
-* Need to update NavBar to show different options when the user is logged in or not logged in.
-* When I sign in, the sign in form is still rendering.
-* Add basic navigation via NavBar
-* Address unnecessary imported Files
-* Change Signup/Login password input type to password vs. text
 
 ## What's Left To Do
 * Add/view tasks
-* Add CSS
 * Address time conformity issue (see screenshot for error)
 * In Redux store, Lists: and MyLists look identical. Both aren't necessary.
 
@@ -68,7 +56,7 @@
 
 
 ## What to Review for Assessment
-* Types of React Components (and the project requirements for those components)
+* Types of React Components
 * Async vs. sync actions / action creators
 * Dispatch
 * Connect

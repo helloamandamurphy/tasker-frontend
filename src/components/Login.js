@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { updateLoginForm } from '../actions/loginForm';
 import { login } from '../actions/currentUser'
 
+// functional / stateless component
 const Login = ({ loginFormData, updateLoginForm, login, history }) => {
 
   const handleInputChange = event => {
@@ -36,12 +37,6 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
     </form>
   )
 }
-
-// <div class="ui container">
-//   <h4>Sample Login Information</h4>
-//   <p>Email: thor@asgard.net</p>
-//   <p>Password: 1234</p>
-// </div>
 
 // Reading states from Redux store
 // we can now use these as props

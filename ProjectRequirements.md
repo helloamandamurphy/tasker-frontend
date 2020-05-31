@@ -7,9 +7,9 @@
 
 [x] Your app should have one HTML page to render your react-redux application
 
-[] There should be 2 container components
+[x] There should be 2 container components
 
-[] There should be 5 stateless components
+[x] There should be 5 stateless components
 
 [x] There should be 3 routes
 
@@ -23,4 +23,4 @@
 
 [x] Your client-side application should handle the display of data with minimal data manipulation
 
-[] Your application should have some minimal styling: feel free to stick to a framework (like react-bootstrap), but if you want to write (additional) CSS yourself, go for it!
+[x] Your application should have some minimal styling: feel free to stick to a framework (like react-bootstrap), but if you want to write (additional) CSS yourself, go for it!

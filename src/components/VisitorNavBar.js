@@ -2,7 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-//stateless component
+// functional / stateless component
 const VisitorNavBar = () => (
   <div class="VisitorNavBar">
     <div class="ui secondary menu">

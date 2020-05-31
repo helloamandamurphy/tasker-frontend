@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 // Import from Files
 import Logout from './Logout'
 
+// functional / stateless component
 const NavBar = ({ currentUser, loggedIn }) => {
   return (
     <div className="NavBar">

@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom'
 // Import from Files
 import { logout } from "../actions/currentUser"
 
+// functional / stateless component
 const Logout = ({ logout, history }) => {
   return (
     <form style={{display: "inline-block"}} onSubmit={(event) => {

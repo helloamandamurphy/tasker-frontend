@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//stateless component
+// functional / stateless component
 const Home = () => (
   <div>
     <h1>Welcome to Tasker</h1>
