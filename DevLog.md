@@ -16,8 +16,8 @@
 #### Home Page (Logged in)
 * Add Clock as a secondary NavBar?
 * Change Home Page to boards of existing lists. (My Lists)
-* First board should include a link to Create a New List
-* Revise NavBar to include: Home icon, Logo, and Logged in as.., Logout Button
+~~First board should include a link to Create a New List~~
+~~Revise NavBar to include: Home icon, Logo, and Logged in as.., Logout Button~~
 
 #### List Create Page
 * Rework Form
@@ -47,7 +47,6 @@
 
 ## Ask for Help
 -Why are the Signup/Login forms showing up below the Home component?
--Can I move the Switch from App.js to a LoggedIn container/component?
 
 ### For Project Completion
 * Write Blog Post
