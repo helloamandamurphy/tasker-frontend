@@ -14,8 +14,8 @@
 ~~Add sample email and password for guests~~
 
 #### Home Page (Logged in)
-* Add Clock as a secondary NavBar?
-* Change Home Page to boards of existing lists. (My Lists)
+~~Add Clock as a secondary NavBar?~~
+~~Change Home Page to boards of existing lists. (My Lists)~~
 ~~First board should include a link to Create a New List~~
 ~~Revise NavBar to include: Home icon, Logo, and Logged in as.., Logout Button~~
 

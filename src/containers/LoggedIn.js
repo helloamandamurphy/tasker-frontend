@@ -9,12 +9,14 @@ import MyLists from '../components/MyLists'
 import ListCard from '../components/ListCard'
 import NewListFormWrapper from '../components/NewListFormWrapper'
 import EditListFormWrapper from '../components/EditListFormWrapper'
+import Clock from '../components/Clock'
 
 // functional / stateless component
 const LoggedIn = ({ lists, loggedIn }) => {
   return (
     <React.Fragment>
       <NavBar/>
+      <Clock/>
       <Switch>
         <Route exact path='/lists' component={MyLists}/>
         <Route exact path='/lists/new' component={NewListFormWrapper}/>
