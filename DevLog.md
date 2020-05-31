@@ -45,6 +45,10 @@
 * No need for task show page/route
 * Maybe the task estimated time should be a percentage of the time to adapt to total time changes.
 
+## Ask for Help
+-Why are the Signup/Login forms showing up below the Home component?
+-Can I move the Switch from App.js to a LoggedIn container/component?
+
 ### For Project Completion
 * Write Blog Post
 * Record Demo Video
