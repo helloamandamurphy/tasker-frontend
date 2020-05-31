@@ -39,7 +39,7 @@ class EditListFormWrapper extends React.Component {
     return <>
         <ListForm editMode handleSubmit={this.handleSubmit} />
         <br/>
-        <button onClick={()=>deleteList(listId, history)}>Delete List</button>
+        <button class="ui negative button" onClick={()=>deleteList(listId, history)}>Delete List</button>
       </>
   }
 };
