@@ -38,8 +38,8 @@ class Clock extends React.Component {
       <React.Fragment>
         <div class="ui divider"></div>
         <div>
-          <h4 class="ui center aligned header">{d}</h4>
-          <h1 class="ui center aligned huge header">{h}:{m}</h1>
+          <h3 class="ui center aligned header">{d}</h3>
+          <h1 class="ui center aligned huge header" style={{"font-size": "10em"}}>{h}:{m}</h1>
         </div>
         <div class="ui divider"></div>
       </React.Fragment>
