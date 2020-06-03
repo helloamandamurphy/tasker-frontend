@@ -9,7 +9,7 @@ const ListCard = ({ list }) => {
     list ?
       <div>
         <h2>{list.name}</h2>
-        <p>Your deadline for this list is <b>{moment(list.end_time).format('LT')}</b></p>
+        <p>Your deadline for this list is <b>{moment(list.end_time).add(4, 'hours').format('LT')}</b></p>
         <h3>Tasks</h3>
         <i>In future development, this is where I would add the ability to create, read, update, and delete tasks for each list, along with a timer for each task.</i>
         <ul>

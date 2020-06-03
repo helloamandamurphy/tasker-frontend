@@ -34,6 +34,7 @@
 * Add estimated start time.
 
 #### List Show Page
+* Moment.js is not showing the correct time--I've fixed it currently by adding four hours to offset the discrepancy. This is not a real solution.
 * Needs to have a list of tasks with their times
 * Needs to show total amount of time
 * Needs to show start and end times
