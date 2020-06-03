@@ -39,7 +39,7 @@ export const signup = (credentials, history) => {
         dispatch(setCurrentUser(response))
         dispatch(getMyLists())
         dispatch(resetSignupForm())
-        history.push('/')
+        history.push('/lists')
       }
     })
     .catch(console.log)
@@ -64,7 +64,7 @@ export const login = (credentials, history) => {
         dispatch(setCurrentUser(response))
         dispatch(getMyLists())
         dispatch(resetLoginForm())
-        history.push('/')
+        history.push('/lists')
       }
     })
     .catch(console.log)
