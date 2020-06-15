@@ -5,19 +5,19 @@ class Counter extends React.Component {
   constructor() {
     super();
     this.state = {
-      count: 0
+      liked: false
     };
   }
 
-  increment = () => {
-    this.setState({
-      count: this.state.count + 1
-    });
-  };
+  heartThis = () => {
+    this.setState(state => {
+      return {liked: !state.liked}
+    })
+  }
 
   render() {
     return (
-      <button class="ui button" onClick={this.increment}>{this.state.count}</button>
+      <button class="ui button" onClick={this.heartThis} style={{color: this.state.liked ? "red" : "gray"}}>❤︎</button>
     )
   }
 }
